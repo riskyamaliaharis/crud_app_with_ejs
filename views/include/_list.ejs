@@ -1,0 +1,52 @@
+<% for(var i=0;i<users.length;i++) { %>
+  <tr>
+    <td><%= i+1 %></td>
+    <td><%= users[i].name %></td>
+    <td><%= users[i].phone %></td>
+    <td><%= users[i].date %></td>
+    <td><%= users[i].address %></td>
+    <td><%= users[i].current_position %></td>
+    <td>
+      <!-- Include Modal Shows ID Card -->
+      <!-- <%- include('_modal_view') %> -->
+      <!-- Include Modal Shows ID Card -->
+
+      <button
+        type="button"
+        class="btn btn-outline-dark"
+        data-toggle="modal"
+        data-target="#myModalView"
+      >
+        View
+      </button>
+      <!-- Modal -->
+      <div class="modal fade" id="myModalView" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+            <div class="modal-body"><%= users[i].name %></div>
+          </div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <!-- Include Modal Update Data -->
+      <%- include('_modal_update') %>
+      <!-- Include Modal Update Data -->
+
+      <a
+        class="btn border-shadow delete"
+        style="cursor: pointer"
+        data-id="<%=users[i]._id%>"
+      >
+        <span class="text-gradient"><i class="fas fa-times"></i></span>
+      </a>
+    </td>
+  </tr>
+  <% } %></users.length;i++)
+>
