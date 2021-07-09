@@ -7,6 +7,7 @@
 
 ## About The Project
 
+This project is a simple CRUD which implements MVC (Models, Views, Controllers) architecture
 [More about Express](https://en.wikipedia.org/wiki/Express.js)
 
 ## Built With
